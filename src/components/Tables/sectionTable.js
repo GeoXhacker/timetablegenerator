@@ -177,7 +177,7 @@ const EnhancedTableToolbar = (props) => {
           id="tableTitle"
           component="div"
         >
-          Section Table
+          Class Table
         </Typography>
       )}
 

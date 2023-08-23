@@ -71,7 +71,7 @@ export default function SectionInput({ sections, setSections }) {
   };
   return (
     <Card className={classes.root}>
-      <h3>Add Section</h3>
+      <h3>Class Section</h3>
       <div>
         <TextField
           className={classes.textField}
@@ -109,7 +109,7 @@ export default function SectionInput({ sections, setSections }) {
           size="medium"
           onClick={addButton}
         >
-          + Add Section
+          + Add Class
         </Button>
       </div>
     </Card>

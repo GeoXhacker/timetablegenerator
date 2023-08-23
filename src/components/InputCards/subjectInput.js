@@ -90,7 +90,7 @@ export default function SubjectInput({ subjects, setSubjects }) {
         setSubjects(temp, docs.subjects);
         setEmptyTextfields();
       } else {
-        setcontantHrsError("CreditHrs can't exceed contactHrs");
+        setcontantHrsError("Number of times can't exceed contactHrs");
       }
     } else {
       setRequiredError();
@@ -130,7 +130,7 @@ export default function SubjectInput({ subjects, setSubjects }) {
           type="number"
           className={!creditHrsError ? classes.hrs : ""}
           id="credit-hours"
-          label="Credit Hours"
+          label="Times"
           select
           required
           error={!!creditHrsError}
