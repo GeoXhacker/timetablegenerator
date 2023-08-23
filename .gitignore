@@ -12,7 +12,7 @@
 /build
 # build
 # Firebase Config File
-serviceAccountKey.json
+# serviceAccountKey.json
 # misc
 .DS_Store
 .env

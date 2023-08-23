@@ -35,7 +35,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const lectureArrangement = [["1"], ["1 - 1", "2"], ["1 - 1 - 1", "2 - 1"], ["1 - 1 - 1 - 1", "2 - 2", "3 - 1"]];
+// const lectureArrangement = [["1"], ["1 - 1", "2"], ["1 - 1 - 1", "2 - 1"], ["1 - 1 - 1 - 1", "2 - 2", "3 - 1"]];
+const lectureArrangement = [["1"], ["1 - 1"], ["1 - 1 - 1", "2 - 1"], ["1 - 1 - 1 - 1", "2 - 2", "3 - 1"]];
 export default function LectureInput({
   lectures,
   setLectures,
@@ -217,7 +218,7 @@ export default function LectureInput({
             type="number"
             className={classes.textField}
             id="lecture"
-            label="Lecture Arrangement"
+            label="Lesson Arrangement"
             select
             required
             error={!!lecturearrError}

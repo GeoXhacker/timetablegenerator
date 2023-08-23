@@ -124,6 +124,8 @@ t - teacher name []
 	res.send(sections)
 })
 app.use('*', (req, res) => {
+	res.setHeader('Content-Type', 'text/html');
+ 	res.setHeader('Cache-Control', 's-max-age=1, stale-while-revalidate');
 	res.sendFile(path.join(__dirname, '/build/index.html'))
 })
 app.listen(port, () => console.log('Listening on Port 8000'))
