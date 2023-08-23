@@ -64,7 +64,7 @@ export default function SectionInput({ sections, setSections }) {
       } else temp = [[title, code]];
 
       setSections(temp, docs.sections);
-      setEmptyTextfields();
+      // setEmptyTextfields();
     } else {
       setRequiredError();
     }

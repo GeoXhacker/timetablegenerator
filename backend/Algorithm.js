@@ -11,10 +11,11 @@ const Scheduling = (teacherLec, sections, period) => {
 		for (let j = 0; j < teacherLec.length; j++) {
 			let valid = teacherLec[j].assigned.findIndex(
 				(e) => e.class === sections[i]
-			)
+			) // find inde of subj
 			remainingLectures[i][j] =
 				valid !== -1 ? teacherLec[j].assigned[valid].subject.contactHrs : 0
 		}
+		console.log('remaining Lectures', remainingLectures)
 	}
 	console.table(remainingLectures)
 
@@ -84,6 +85,8 @@ const Scheduling = (teacherLec, sections, period) => {
 	}
 	console.table(remainingLectures)
 
+	console.log(final_tt)
+
 	return final_tt
 }
 
@@ -110,9 +113,9 @@ function isSchedulePossible(t_available, c_available, tIndex, cIndex, period) {
 	} else return false
 }
 
-function ThreeDarray(x, y, z) {
+function ThreeDarray(x, y, z) { // q- nClass, y-nDays, z-nContacthours
 	let array = []
-	for (let i = 0; i < x; i++) {
+	for (let i = 0; i < x; i++) { 
 		array[i] = []
 		for (let j = 0; j < y; j++) {
 			array[i][j] = []
@@ -121,6 +124,7 @@ function ThreeDarray(x, y, z) {
 			}
 		}
 	}
+	// console.log(array, "threeDayarray")
 	return array
 }
 const addSubjects = (subs) => {

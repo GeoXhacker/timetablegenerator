@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth"
 import firebase from "../firebase/firebase"
 import Logo from "../components/Logo/Logo"
-import Particles from "react-particles-js"
+// import Particles from "react-particles-js"
 import Loader from "react-loader-spinner"
 
 const particlesOptions = {
@@ -50,7 +50,7 @@ const LoginScreen = ({ setIsSigned }) => {
 		<div>
 			{loading ? (
 				<div className="loading">
-					<div id="logo-name">Activity Scheduler</div>
+					<div id="logo-name">Bombo Time Table Generator</div>
 					<Loader
 						color="#FFFFFF"
 						width={200}
@@ -60,8 +60,9 @@ const LoginScreen = ({ setIsSigned }) => {
 				</div>
 			) : (
 				<div>
-					<Particles className="particles" params={particlesOptions} />
-					<Logo></Logo>
+					{/* <Particles className="particles" params={particlesOptions} /> */}
+					{/* <Logo></Logo> */}
+					<div id="logo-name">Bombo Time Table Generator</div>
 					<div className="firebaseUI">
 						<StyledFirebaseAuth
 							uiConfig={uiConfig}

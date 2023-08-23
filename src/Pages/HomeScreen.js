@@ -282,8 +282,7 @@ const HomeScreen = () => {
       </div>
       <GenerateTimetable timetable={timetable} />
       <div className={classes.footer}>
-        Made By <a href='https://github.com/justEhmadSaeed'>Ehmad Saeed</a> &{' '}
-        <a href='https://github.com/Mehr-un-nisa'>Mehrunnisa</a>
+        Made By <a href='https://github.com/GeoXhacker'>GeoXhacker</a> 
       </div>
     </div>
   );

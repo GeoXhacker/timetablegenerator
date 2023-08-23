@@ -22,15 +22,16 @@ const db = admin.firestore()
 // Middleware
 app.post('/generate', async (req, res) => {
 	const userID = req.body['userID']
+	console.log(userID, 'user Id')
 	if (!userID) {
 		res.send(401)
 		return
 	}
 
 	const collection = db.collection(userID)
-	console.log(collection)
+	// console.log(collection, "collection")
 	const snapshot = await collection.get()
-	console.log(snapshot)
+	// console.log(snapshot, 'snapshot')
 
 	let l
 	let subjects
@@ -46,7 +47,13 @@ app.post('/generate', async (req, res) => {
 		else if (snap.id === docs.subjects) subjects = Object.values(snap.data())
 		else if (snap.id === docs.workingTime) workingTime = snap.data()
 	})
+/*
+l - lectures  [ 'Mukisa Geofrey', 'S1E', 'PE', '1', 'Mukisa GeofreyS1E' ] array of arrays
+subjects 
+t - teacher name []
 
+
+*/
 	const t = l
 		.map((e) => e[0])
 		.filter((value, index, self) => self.indexOf(value) === index)
@@ -63,13 +70,15 @@ app.post('/generate', async (req, res) => {
 			assigned: []
 		}
 	})
+	
+	// assign teachers classes and subjects
 	teacherLec.forEach((lac) => {
 		l.forEach((lec) => {
 			if (lec[0] === lac.name)
 				lac.assigned.push({
 					class: lec[1],
 					subject: subjects[subjects.findIndex((s) => s.code === lec[2])],
-					lecture: lec[3]
+					lecture: lec[3] //contact hours
 				})
 		})
 	})
@@ -79,12 +88,13 @@ app.post('/generate', async (req, res) => {
 		d: days.length,
 		p: days.reduce((a, b) => Math.max(a, b))
 	}
-	// console.log("teacher", t);
-	// console.log("sections", sections);
-	// console.log("subjects", subjects);
-	// console.log("l", l);
-	// console.log("teacherLec", teacherLec);
-	// console.log("first lecture", teacherLec[0].assigned[0].subject);
+	console.log("teacher", t);
+	console.log("sections", sections);
+	console.log("subjects", subjects);
+	console.log("l", l);
+	console.log("teacherLec", teacherLec);
+	console.log("first lecture", teacherLec[0].assigned[0].subject);
+	console.log('period', period, 'days', days)
 	const finalized = Scheduling(teacherLec, sections, period)
 
 	// Delete the old timetable documents

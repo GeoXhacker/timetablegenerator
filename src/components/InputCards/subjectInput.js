@@ -37,8 +37,8 @@ export default function SubjectInput({ subjects, setSubjects }) {
 
   const [title, setTitle] = React.useState("");
   const [code, setCode] = React.useState("");
-  const [contactHrs, setcontantHrs] = React.useState("");
-  const [creditHrs, setcreditHrs] = React.useState("");
+  const [contactHrs, setcontantHrs] = React.useState(4);
+  const [creditHrs, setcreditHrs] = React.useState(4);
 
   const [titleError, setTitleError] = React.useState("");
   const [codeError, setCodeError] = React.useState("");
@@ -66,8 +66,8 @@ export default function SubjectInput({ subjects, setSubjects }) {
   const setEmptyTextfields = () => {
     setTitle("");
     setCode("");
-    setcontantHrs("");
-    setcreditHrs("");
+    // setcontantHrs("");
+    // setcreditHrs("");
 
     setTitleError("");
     setCodeError("");
@@ -142,7 +142,7 @@ export default function SubjectInput({ subjects, setSubjects }) {
           }}
           variant="outlined"
         >
-          {[1, 2, 3].map((option) => (
+          {[1, 2, 3,4].map((option) => (
             <MenuItem key={option} value={option}>
               {option}
             </MenuItem>
@@ -167,7 +167,7 @@ export default function SubjectInput({ subjects, setSubjects }) {
           }}
           variant="outlined"
         >
-          {[1, 2, 3].map((option) => (
+          {[1, 2, 3, 4].map((option) => (
             <MenuItem key={option} value={option}>
               {option}
             </MenuItem>

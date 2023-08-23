@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const lectureArrangement = [["1"], ["1 - 1", "2"], ["1 - 1 - 1", "2 - 1", "3"]];
+const lectureArrangement = [["1"], ["1 - 1", "2"], ["1 - 1 - 1", "2 - 1"], ["1 - 1 - 1 - 1", "2 - 2", "3 - 1"]];
 export default function LectureInput({
   lectures,
   setLectures,
@@ -95,26 +95,27 @@ export default function LectureInput({
       let temp = [...lectures];
       
       if (lectures) {
-        if (
-          temp.findIndex(
-            (e) =>
-              e[4] === teacher + section ||
-              (e[1] === section && e[2] === subject)
-          ) === -1
-        )
+        // if (
+        //   temp.findIndex(
+        //     (e) =>
+        //       e[4] === teacher + section ||
+        //       (e[1] === section && e[2] === subject)
+        //   ) === -1
+        // )
           temp.push([teacher, section, subject, lectureArr, teacher + section]);
-        else {
-          setRequiredError();
-          setteacherError("Lecture already exists");
-          setsubjectError("Lecture already exists");
-          setsectionError("Lecture already exists");
-          return;
-        }
+        // else {
+        //   setRequiredError();
+        //   setteacherError("Lecture already exists");
+        //   setsubjectError("Lecture already exists");
+        //   setsectionError("Lecture already exists");
+        //   return;
+        // }
       } else
         temp = [[teacher, section, subject, lectureArr, teacher + section]];
 
       setLectures(temp, docs.lectures);
-      setEmptyTextfields();
+      // setEmptyTextfields();
+      console.log("added ...")
     } else setRequiredError();
   };
 
@@ -233,7 +234,8 @@ export default function LectureInput({
             variant="outlined"
           >
             {subject && subjectIndex ? (
-              lectureArrangement[subjectIndex[2] - 1].map((option) => (
+              lectureArrangement[subjectIndex[2] - 1]
+              .map((option) => (
                 <MenuItem key={option ? option : "lecture"} value={option}>
                   {option}
                 </MenuItem>

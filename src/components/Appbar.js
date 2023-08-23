@@ -87,7 +87,7 @@ export default function PrimaryAppBar() {
 			<AppBar position="fixed">
 				<Toolbar>
 					<Typography className={classes.title} variant="h6" noWrap>
-						Activity Scheduler
+						Bombo Time Table Generator
 					</Typography>
 					<div className={classes.grow} />
 					<div className={classes.sectionDesktop}>

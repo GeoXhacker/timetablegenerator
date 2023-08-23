@@ -1,10 +1,11 @@
 <div align="center">
-<img src="https://user-images.githubusercontent.com/46846821/89666520-f195cb80-d8f3-11ea-80bb-f9d5137c6c6c.png" alt ="Activity Scheduing">
+<!-- <img src="https://user-images.githubusercontent.com/46846821/89666520-f195cb80-d8f3-11ea-80bb-f9d5137c6c6c.png" alt ="Activity Scheduing"> -->
 <h1>Timetable Scheduler</h1>
 </div>
 <div align="center">
 	<img src="https://img.shields.io/badge/License-MIT-%230F2A5F" alt="license MIT">
 </div>
+
 
 ## 🎯 Plan of Action
 
@@ -93,13 +94,18 @@ For the next time, you have to follow steps 2 & 4 only.
 ## 👨🏻‍💻 Contributing
 
 Make sure you read the [contributing guidelines](contributing.md) before opening a PR.
+Thanks to 
+- 🧑 [Ehmad Saeed](https://twitter.com/justEhmadSaeed)
+- 👩 [Mehrunnisa](mailto:mehrunnisa533@gmail.com)
+
+For creating the intial code base.
 
 ## 📧Contact Us
 
 In case of any query regarding the project installation, feel free to contact:
 
-- 🧑 [Ehmad Saeed](https://twitter.com/justEhmadSaeed)
-- 👩 [Mehrunnisa](mailto:mehrunnisa533@gmail.com)
+- 🧑 [Geo](https://github.com/GeoXhacker)
+
 
 ## 🔑 License & Conduct
 
