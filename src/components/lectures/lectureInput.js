@@ -128,7 +128,7 @@ export default function LectureInput({
   return (
     <Card className={classes.root}>
       <CardContent className={classes.content}>
-        <h3 style={{ textAlign: "left" }}>Add Lectures</h3>
+        <h3 style={{ textAlign: "left" }}>Add Lessons</h3>
         <div>
           <TextField
             type="number"

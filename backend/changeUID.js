@@ -1,5 +1,5 @@
 // config
-let email = "mukisageophrey@gmail.com";
+let email = "dninshaba@gmail.com";
 const admin = require('firebase-admin')
 let serviceAccountData = require("./constants/serviceAccountKey.json");
 let adminConfig = {
@@ -18,7 +18,7 @@ const firebaseConfig = {
 	measurementId: "G-M3VQMQT5J8"
   };
 let newUserOverrides = {
-    uid: "1pMCzly2Iv1SdXXvVPKgJjgbGbdw2",
+    uid: "2m0vV1I0BghYUmxv9YZSN8pJRcQ2",
 };
 
 // 2m0vV1I0BghYUmxv9YZSN8pJRcQ2
